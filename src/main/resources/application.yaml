@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Casst
+
+Payment:
+  stripe: true
+  paypal: true
+
+stripe:
+  apiUrl: https://api.stripe.com
+  enabled: true
+  timeout: 1000
+  supported-currencies: USD,EUR, GBP
+
+mail:
+  host: https://smtp.gmail.com
+  port: 5761
