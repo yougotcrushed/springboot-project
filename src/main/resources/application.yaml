@@ -2,16 +2,14 @@ spring:
   application:
     name: Casst
 
-Payment:
-  stripe: true
-  paypal: true
+  jwt:
+    secret: ${JWT_SECRET}
+    accessTokenExpiration: 14400 # 4h
+    refreshTokenExpiration: 684800 #7d
+
+  profiles:
+    active: dev
 
 stripe:
-  apiUrl: https://api.stripe.com
-  enabled: true
-  timeout: 1000
-  supported-currencies: USD,EUR, GBP
-
-mail:
-  host: https://smtp.gmail.com
-  port: 5761
+  secretKey: ${STRIPE_SECRET_KEY}
+  webhookSecretKey: ${STRIPE_WEBHOOK_SECRET_KEY}
